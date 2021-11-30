@@ -1,0 +1,6 @@
+name: Webform Submission Delete Crirteria
+type: module
+description: A custom module that contains allows user to delete webform submission that meets certain criteria.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

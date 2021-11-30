@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Webform Submission Delete Crirteria module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+/**
+ * Implements hook_cron().
+ */
+/**
+ * Implements hook_cron().
+ */
+function webform_submission_delete_criteria_cron() {
+
+  $query = \Drupal::entityQuery('webform_submission')
+    ->condition('entity_type', 'node')
+    ->condition('entity_id', 23)
+    ->condition('created',  1588809600, '>')
+    ->accessCheck(FALSE);
+
+
+  $result = $query->execute();
+  foreach ($result as $item) {
+    $submission = \Drupal\webform\Entity\WebformSubmission::load($item);
+    $submission->delete();
+  }
+
+  Drupal::logger('webform_submission_delete_criteria')->notice("Submissions has been deleted");
+  //  Drupal::logger()->error("Assignments's statuses' cron failed to execute.");
+
+
+
+}
+

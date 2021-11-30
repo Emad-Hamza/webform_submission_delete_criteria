@@ -1,0 +1,7 @@
+webform_submission_delete_criteria.example:
+  path: '/webform_submission_delete_criteria/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\webform_submission_delete_criteria\Controller\WebformSubmissionDeleteCriteriaController::build'
+  requirements:
+    _permission: 'access content'

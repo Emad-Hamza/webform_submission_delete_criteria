@@ -1,0 +1,5 @@
+services:
+  webform_submission_delete_criteria.commands:
+    class: \Drupal\webform_submission_delete_criteria\Commands\WebformSubmissionDeleteCriteriaCommands
+    tags:
+      - { name: drush.command }

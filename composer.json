@@ -1,0 +1,21 @@
+{
+    "name": "org/webform_submission_delete_criteria",
+    "description": "This extension provides new commands for Drush.",
+    "type": "drupal-drush",
+    "authors": [
+        {
+            "name": "Emad Al-Din Hamza",
+            "email": "emad.aldin.hamza@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9"
+            }
+        }
+    }
+}
